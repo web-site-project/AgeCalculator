@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculetorContent">
+      <div class="content">
+        <div class="inputSection">
+          <label>DAY<input
+              type="text"
+              placeholder="DD"
+              name="Day"
+              id="Day"
+              required />
+              <small></small>
+            </label>
+          <label>MONTH<input
+              type="text"
+              placeholder="MM"
+              name="Month"
+              id="Month"
+              required />
+              <small></small>
+            </label>
+          <label>YEAR<input
+              type="text"
+              placeholder="YYYY"
+              name="Year"
+              id="Year"
+              required />
+              <small></small>
+            </label>
+        </div>
+        <div class="btn">
+          <button id="btnClick">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="41"
+              height="39"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="showValue">
+          <article><span id="YearOutput">--</span> years</article>
+          <article><span id="MonthOutput">--</span> months</article>
+          <article><span id="DayOutput">--</span> days</article>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+@font-face {
+    font-family: poppins;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+    font-weight: 400i, 700, 800i;
+}
+@font-face {
+    font-family: poppinsBoldItlatic;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    font-weight: 400i, 700, 800i;
+}
+@font-face {
+    font-family: poppinsItlatic;
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+    font-weight: 400i, 700, 800i;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-rey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    /* font size */
+    --Font-Size : 22px
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+body{
+    background-color: var(--Off-white);
+}
+.calculetorContent{
+    width: 600px;
+    min-width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: poppins;
+    background-color: var(--White);
+    border-radius: 10px 10px 100px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.calculetorContent .content{
+    width: 90%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.calculetorContent .inputSection{
+    display: grid;
+    width: 70%;
+    min-width: 100%;
+    padding-top: 10px;
+    gap: 40px;
+    grid-template-columns: repeat(4, 21%);
+    justify-content: start;
+    margin-bottom: 20px;
+}
+.calculetorContent .inputSection label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--Smokey-grey);
+    text-indent: 5px;
+}
+.calculetorContent .inputSection label input{
+    font-size:var(--Font-Size) ;
+    font-family: poppins;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid ;
+}
+
+.calculetorContent .inputSection label small{
+    letter-spacing: 0px !important;
+    display: inline-block;
+    width: 100%;
+    text-indent: 5px;
+    margin-top: 5px;
+    font-family:poppinsItlatic ;
+    font-weight: 600;
+}
+.calculetorContent .btn{
+    height: 0;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calculetorContent .btn button{
+    background-color: var(--Purple);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.calculetorContent .showValue article,
+.calculetorContent .showValue article span{
+    font-size: 50px;
+    font-weight: 800;
+    font-family: poppinsBoldItlatic;
+    height: fit-content;
+}
+
+.calculetorContent .showValue article span{
+    color: var(--Purple);
+    display: inline-block;
+}
+
+/* component */
+.invalid,
+.empty{
+    color: var(--Light-red) !important;
+}
+
+
+
+@media (max-width: 600px){
+    .calculetorContent{
+        width: 90%;
+        max-width: 350px;
+    }
+    .calculetorContent .inputSection{
+        grid-template-columns: repeat(3,minmax(20% , 25%));
+        gap: 9%;
+        width: 100%;
+    }
+    
+    .calculetorContent .inputSection label input{
+        font-size:20px;
+    }
+
+    .calculetorContent .btn{
+        justify-content: center;
+    }
+
+    .calculetorContent .inputSection label {
+        font-size: 9px;
+    }
+}
